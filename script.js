@@ -10,3 +10,4 @@ console.log(apiUrl)
 
 fetch(apiUrl)
     .then((data) => data.json())
+    .then((hello) => console.log(hello))
