@@ -7,18 +7,16 @@ $(document).ready(function(){
 function performSearch(event) {
     var request;
     event.preventDefault();
-    $("#the-word").text("welcome");
-
+    $("#the-word").text("");
+    $("#the-phonetic").text("");
+    
     request = $.ajax({
-        url: 'https://api.dictionaryapi.dev/api/v2/entries/en/',
+        url: 'https://api.dictionaryapi.dev/api/v2/entries/en/' + $("#word").val(),
         type: "GET",
-        data: $("#word").val(),
     });
 
     request.done(function(response){
-        console.log(response);
         formatSearch(response);
-        console.log(response);
     });
 
     request.fail(function (){
@@ -27,10 +25,15 @@ function performSearch(event) {
 }
 
 function formatSearch(jsonObject) {
-    var the_word = jsonObject.word;
-    var the_phonetic = jsonObject.phonetic;
-    console.log(word);
+    var the_word = jsonObject[0].word;
+    var the_definition = jsonObject[0].meanings[0].definitions[0].definition;
+    var the_phonetic = jsonObject[0].phonetic;
+    var the_example = jsonObject[0].meanings[0].definitions[0].example;
+    var the_origin = jsonObject[0].origin;
     
     $("#the-word").text(the_word);
+    $("#the-definition").text(the_definition);
     $("#the-phonetic").text(the_phonetic);
+    $("#the-example").text("Example: " + the_example);
+    $("#the-origin").text("Origin: " + the_origin);
 }

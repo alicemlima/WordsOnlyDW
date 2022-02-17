@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    font-family: "Tinos" ;
+    background-color:antiquewhite;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+nav{
+    background-color: antiquewhite;
+}
+
+.layout {
+    padding: 5rem;
+}
+
+.title {
+    font-family: "Imbue";
+    font-size: 3rem;padding: 1rem;
+}
