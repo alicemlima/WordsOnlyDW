@@ -1,3 +1,5 @@
+let saveWords = JSON.parse(localStorage.getItem('saveWords')) || [];
+
 $(document).ready(function(){
     $("#form-submit").submit(function(event){
         performSearch(event);
@@ -36,4 +38,16 @@ function formatSearch(jsonObject) {
     $("#the-phonetic").text(the_phonetic);
     $("#the-example").text("Example: " + the_example);
     $("#the-origin").text("Origin: " + the_origin);
+
+    $('#save-word').click(function() {
+        const index = saveWords.indexOf(the_word);
+        const exists = index != -1
+        if(exists){
+            saveWords.splice(index, 1);
+        }else{
+            saveWords.push(the_word);
+        }
+
+        localStorage.setItem("word", JSON.stringify(saveWords));
+    })
 }

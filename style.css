@@ -22,7 +22,16 @@ nav{
     padding: 5rem;
 }
 
+.title-display {
+    display: flex;
+    flex-direction: row;
+}
+
 .title {
     font-family: "Imbue";
     font-size: 3rem;padding: 1rem;
+}
+
+.salvas {
+    padding: 5rem;
 }

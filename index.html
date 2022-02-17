@@ -24,7 +24,7 @@
 
           <form class="d-flex" id="form-submit">
             <input class="form-control me-2" id="word" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn" type="submit">Search</button>
+            <button class="btn btn-outline-dark" type="submit">Search</button>
           </form>
 
       </div>
@@ -34,7 +34,14 @@
       <div class="row">
         <div class="layout col">
           <div class="row">
+            <div class="title-display col">
             <h1 id="the-word"></h1>
+            <button class="btn" id="save-word" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+              </svg>
+            </button>
+          </div>
             <h6 id="the-phonetic"></h6>
           </div>
           <div class="row">
@@ -48,8 +55,8 @@
           </div>
           
         </div>
-        <div class="col">
-          Column
+        <div class="salvas col">
+          <h3> Palavras salvas </h3>
         </div>
       </div>    
     
